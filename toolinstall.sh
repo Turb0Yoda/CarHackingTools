@@ -321,21 +321,17 @@ Categories=Utility
 StartupNotify=false
 EOF
 
-wget https://carhacking.tools/install/images/cantact.png -O cantact.png
-
 cat << EOF > Cantact.desktop
 [Desktop Entry]
 Name=Cantact
 Type=Application
 Path=/tools/cantact-app/cantact/bin
 Exec=sudo -H /tools/cantact-app/cantact/bin/cantact
-Icon=/tools/icons/cantact.png
+Icon=/tools/images/Icons/cantact.png
 Terminal=true
 Categories=Utility
 StartupNotify=false
 EOF
-
-wget https://carhacking.tools/install/images/icsim.png -O icsim.png
 
 cat << EOF > ICSim.desktop
 [Desktop Entry]
@@ -343,7 +339,7 @@ Name=ICSim
 Type=Application
 Path=/tools/ICSim/
 Exec=/tools/ICSim/icsim vcan0
-Icon=/tools/icons/icsim.png
+Icon=/tools/images/Icons/icsim.png
 Terminal=true
 Categories=Utility
 StartupNotify=false
@@ -355,13 +351,11 @@ Name=ICSim Controls
 Type=Application
 Path=/tools/ICSim/
 Exec=/tools/ICSim/controls vcan0
-Icon=/tools/icons/icsim.png
+Icon=/tools/images/Icons/icsim.png
 Terminal=true
 Categories=Utility
 StartupNotify=false
 EOF
-
-wget https://carhacking.tools/install/images/kayak.png -O kayak.png
 
 cat << EOF > KayakInstall.desktop
 [Desktop Entry]
@@ -369,13 +363,11 @@ Name=Kayak Install
 Type=Application
 Path=/tools/kayak
 Exec=/tools/kayak/Kayak-1.0-SNAPSHOT-linux.sh
-Icon=/tools/icons/kayak.png
+Icon=/tools/images/Icons/kayak.png
 Terminal=true
 Categories=Utility
 StartupNotify=false
 EOF
-
-wget https://carhacking.tools/install/images/KatyOBD.png -O KatyOBD.png
 
 cat << EOF > KatyOBD.desktop
 [Desktop Entry]
@@ -383,7 +375,7 @@ Name=KatyOBD
 Type=Application
 Path=/tools/KatyOBD
 Exec=sudo -H python KatyOBD.py
-Icon=/tools/icons/KatyOBD.png
+Icon=/tools/images/Icons/KatyOBD.png
 Terminal=true
 Categories=Utility
 StartupNotify=false
@@ -392,9 +384,9 @@ EOF
 sudo rm ~/Desktop/SavvyCAN.desktop
 sleep 15
 sudo chmod 755 ./*.desktop
-cp ./*.desktop ~/.local/share/applications
+cp ./*.desktop ~/Desktop
 cd .. || exit
 
-cd ~/.local/share/applications || exit
+cd ~/Desktop || exit
 sudo chmod 755 ./*.desktop
 cd .. || exit
