@@ -17,7 +17,7 @@ cd /tools || exit
 mkdir -p images
 cd images || exit
 cp -r ~/carhackingtools/Icons /tools/images
-gsettings set org.mate.background picture-filename "/tools/images/background.gif"
+gsettings set org.mate.background picture-filename '/tools/images/Icons/background.gif'
 cd .. || exit
 
 # Configure Desktop
