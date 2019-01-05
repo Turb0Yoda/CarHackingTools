@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KatyOBD
+Type=Application
+Path=/tools/KatyOBD
+Exec=sudo -H python KatyOBD.py
+Icon=/tools/icons/KatyOBD.png
+Terminal=true
+Categories=Utility
+StartupNotify=false

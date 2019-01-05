@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Cantact
+Type=Application
+Path=/tools/cantact-app/cantact/bin
+Exec=sudo -H /tools/cantact-app/cantact/bin/cantact
+Icon=/tools/icons/cantact.png
+Terminal=true
+Categories=Utility
+StartupNotify=false

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Kayak Install
+Type=Application
+Path=/tools/kayak
+Exec=/tools/kayak/Kayak-1.0-SNAPSHOT-linux.sh
+Icon=/tools/icons/kayak.png
+Terminal=true
+Categories=Utility
+StartupNotify=false

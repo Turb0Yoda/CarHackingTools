@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=BlueLog
+Type=Application
+Path=/tools/Bluelog
+Exec=/tools/Bluelog/bluelog
+Icon=/tools/Bluelog/www/images/bluelog_logo.png
+Terminal=true
+Categories=Utility
+StartupNotify=false

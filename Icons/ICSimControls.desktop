@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ICSim Controls
+Type=Application
+Path=/tools/ICSim/
+Exec=/tools/ICSim/controls vcan0
+Icon=/tools/icons/icsim.png
+Terminal=true
+Categories=Utility
+StartupNotify=false
