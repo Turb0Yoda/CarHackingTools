@@ -1,5 +1,6 @@
+#Modified carhackintools script
 #!/bin/bash
-# Ubuntu Car Hacking Workstation Setup
+# Ubuntu-MATE RPI Car Hacking Workstation Setup
 # TODO: General CLean Up.
 
 set -e
@@ -20,6 +21,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
+
+#fix for node errors
+echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
 
 #Base Package Install (Packages Listed Invidually For Easy Customazation/Trobule Shooting.)
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  \
@@ -90,7 +94,7 @@ wireshark \
 zlib1g-dev
 
 #Python Pip
-python -m pip uninstall pip  # this might need sudo
+sudo python -m pip uninstall pip  # this might need sudo
 sudo apt install --reinstall python-pip
 
 # Starting Car Hacking Tool Installation
@@ -120,11 +124,13 @@ cd .. || exit
 
 # Cantact-App
 # Read The Docs Here: https://github.com/linklayer/cantact-app/
-mkdir -p cantact-app
-cd cantact-app || exit
-wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
-sudo unzip cantact-v0.3.0-alpha.zip
-sudo rm cantact-v0.3.0-alpha.zip
+git clone https://github.com/linklayer/cantact-app
+cd cantact-app
+ant build
+#cd cantact-app || exit
+#wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
+#sudo unzip cantact-v0.3.0-alpha.zip
+#sudo rm cantact-v0.3.0-alpha.zip
 cd .. || exit
 
 # Caringcaribou
@@ -146,6 +152,7 @@ git clone https://github.com/zombieCraig/ICSim.git
 git clone https://github.com/YangChuan80/KatyOBD
 #Fix Typo in KatyOBD
 cd KatyOBD || exit
+###pip install obd
 sed -i 's/tkinter/Tkinter/g' KatyOBD.py
 cd .. || exit
 
@@ -154,17 +161,15 @@ cd .. || exit
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
 mkdir -p -p kayak
 cd kayak || exit
-curl http://kayak.2codeornot2code.org/Kayak-1.0-SNAPSHOT-linux.sh > Kayak-1.0-SNAPSHOT-linux.sh
-chmod +x Kayak-1.0-SNAPSHOT-linux.sh
+git clone git://github.com/dschanoeh/Kayak
+mvn clean package
 cd .. || exit
 
 # OBD-Monitor
 git clone https://github.com/dchad/OBD-Monitor
 cd OBD-Monitor || exit
 cd src|| exit
-make stests
-make server
-make ftests
+make all
 cd .. || exit
 cd .. || exit
 
@@ -172,7 +177,6 @@ cd .. || exit
 # Python-ODB
 # Read The Docs Here: https://python-obd.readthedocs.io/en/latest/
 pip install --user pySerial
-
 git clone https://github.com/brendan-w/python-OBD
 cd python-OBD || exit
 sudo python setup.py install
