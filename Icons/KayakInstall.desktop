@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Kayak Install
+Name=Kayak
 Type=Application
 Path=/tools/kayak
 Exec=/tools/kayak/Kayak-1.0-SNAPSHOT-linux.sh
