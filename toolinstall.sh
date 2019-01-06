@@ -184,7 +184,7 @@ cd .. || exit
 
 # Python-ODB
 # Read The Docs Here: https://python-obd.readthedocs.io/en/latest/
-pip install --user pySerial
+sudo pip install --user pySerial
 git clone https://github.com/brendan-w/python-OBD
 cd python-OBD || exit
 sudo python setup.py install
