@@ -165,8 +165,7 @@ cd .. || exit
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
 git clone git://github.com/dschanoeh/Kayak
 cd Kayak
-mvn build
-mvn clean package
+mvn install
 cd .. || exit
 
 # OBD-Monitor
