@@ -131,7 +131,7 @@ cd .. || exit
 #git clone https://github.com/linklayer/cantact-app
 #cd cantact-app
 #ant build
-cd cantact-app || exit
+#cd cantact-app || exit
 wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
 sudo unzip cantact-v0.3.0-alpha.zip
 sudo rm cantact-v0.3.0-alpha.zip
