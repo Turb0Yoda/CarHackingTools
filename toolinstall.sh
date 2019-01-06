@@ -93,6 +93,10 @@ wget \
 wireshark \
 zlib1g-dev
 
+
+#fix for npm build errors
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
 #Python Pip
 sudo python -m pip uninstall pip  # this might need sudo
 sudo apt install --reinstall python-pip
@@ -124,13 +128,13 @@ cd .. || exit
 
 # Cantact-App
 # Read The Docs Here: https://github.com/linklayer/cantact-app/
-git clone https://github.com/linklayer/cantact-app
-cd cantact-app
-ant build
-#cd cantact-app || exit
-#wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
-#sudo unzip cantact-v0.3.0-alpha.zip
-#sudo rm cantact-v0.3.0-alpha.zip
+#git clone https://github.com/linklayer/cantact-app
+#cd cantact-app
+#ant build
+cd cantact-app || exit
+wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
+sudo unzip cantact-v0.3.0-alpha.zip
+sudo rm cantact-v0.3.0-alpha.zip
 cd .. || exit
 
 # Caringcaribou
@@ -162,6 +166,7 @@ cd .. || exit
 mkdir -p -p kayak
 cd kayak || exit
 git clone git://github.com/dschanoeh/Kayak
+mvn build
 mvn clean package
 cd .. || exit
 
@@ -361,8 +366,8 @@ cat << EOF > KayakInstall.desktop
 [Desktop Entry]
 Name=Kayak Install
 Type=Application
-Path=/tools/kayak
-Exec=/tools/kayak/Kayak-1.0-SNAPSHOT-linux.sh
+Path=/tools/Kayak
+Exec=/tools/Kayak/application/target/kayak/bin/kayak
 Icon=/tools/images/Icons/kayak.png
 Terminal=true
 Categories=Utility
