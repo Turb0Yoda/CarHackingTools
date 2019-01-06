@@ -1,7 +1,6 @@
 #Modified carhackintools script
 #!/bin/bash
 # Ubuntu-MATE RPI Car Hacking Workstation Setup
-# TODO: General CLean Up.
 
 set -e
 
