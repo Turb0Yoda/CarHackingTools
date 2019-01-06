@@ -172,7 +172,12 @@ cd .. || exit
 git clone https://github.com/dchad/OBD-Monitor
 cd OBD-Monitor || exit
 cd src|| exit
-make all
+make gui
+make server
+make simulator
+make ftests
+make stests
+make utests
 cd .. || exit
 cd .. || exit
 
