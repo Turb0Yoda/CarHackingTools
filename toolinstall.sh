@@ -163,9 +163,8 @@ cd .. || exit
 # Kayak
 # Read The Docs Here: http://kayak.2codeornot2code.org/
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
-mkdir -p -p kayak
-cd kayak || exit
 git clone git://github.com/dschanoeh/Kayak
+cd Kayak
 mvn build
 mvn clean package
 cd .. || exit
