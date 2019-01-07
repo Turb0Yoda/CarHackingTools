@@ -1,31 +1,17 @@
 Raspberry Pi Twist.
 ------------
-This is my fork of the Carhacking.tools script to work on a Raspberry Pi 3B running Ubuntu MATE. I had some issues with the install and decided to rework the script a little bit. Below is the original post.
+This is my fork of the Carhacking.tools script to work on a Raspberry Pi 3B running Ubuntu MATE. I had some issues with the install and decided to rework the script a little bit. 
 
 
 # CarHacking.Tools
-[CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on [Ubuntu 18.04](ubuntu.com).
-
-# How To Install
-
-### Install Virtual Machine
-
-An OVA is available on [CarHacking.Tools](CarHacking.Tools) to download.
-
-Download [CHV BETA OVA](https://carhacking.tools/install/beta/CarHackingToolsCHVBeta.ova) Here.
-
-```
-Notes:  
-VMWare Fusion Works Better Than Virtual Box
-Stand Alone Hardware Is Best.
-```
+[CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu MATE ARM, currently at 16.04 LTS.
 
 ### Install Full Desktop
 
 To Install The Full Desktop:
 
 ```
-Git clone https://github.com/jgamblin/carhackingtools
+Git clone https://github.com/Turb0Yoda/CarHackingTools
 cd CarHackingTools
 sudo chmod +x *.sh
 ./workstationinstall.sh
@@ -35,7 +21,7 @@ sudo chmod +x *.sh
 
 To Install Only The Tools:
 ```
-Git clone https://github.com/jgamblin/carhackingtools
+Git clone https://github.com/Turb0Yoda/CarHackingTools
 cd CarHackingTools
 sudo chmod +x *.sh
 ./toolinstall.sh
