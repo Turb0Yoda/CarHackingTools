@@ -52,6 +52,7 @@ libavcodec-dev \
 libavformat-dev \
 libbluetooth-dev \
 libconfig-dev \
+libfontconfig1\
 libgps-dev \
 libgtk-3-dev \
 libportmidi-dev \
@@ -63,6 +64,7 @@ libsqlite3-dev \
 libswscale-dev \
 libtool \
 maven \
+mesa-common-dev \
 moserial \
 net-tools \
 netbeans \
@@ -192,76 +194,13 @@ sudo rm -rf pyobd_0.9.3.tar.gz
 # Start With QT:
 mkdir -p QT
 cd QT || exit
-cat << EOF > qt-noninteractive-install-linux.qs
-function Controller() {
-    installer.autoRejectMessageBoxes();
-    installer.installationFinished.connect(function() {
-        gui.clickButton(buttons.NextButton);
-    })
-    installer.setMessageBoxAutomaticAnswer("cancelInstallation", QMessageBox.Yes);
-}
-Controller.prototype.WelcomePageCallback = function() {
-    gui.clickButton(buttons.NextButton, 3000);
-}
-Controller.prototype.CredentialsPageCallback = function() {
-    var widget = gui.currentPageWidget();
-    widget.loginWidget.EmailLineEdit.setText("");
-    widget.loginWidget.PasswordLineEdit.setText("");
-    gui.clickButton(buttons.NextButton, 500);
-}
-Controller.prototype.IntroductionPageCallback = function() {
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.TargetDirectoryPageCallback = function()
-{
-    var widget = gui.currentPageWidget();
-    if (widget != null) {
-        widget.TargetDirectoryLineEdit.setText("/opt/QT");
-    }
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.ComponentSelectionPageCallback = function() {
-    var widget = gui.currentPageWidget();
-    function trim(str) {
-        return str.replace(/^ +/,"").replace(/ *$/,"");
-    }
-    var packages = trim("qt.qt5.5111.gcc_64,qt.qt5.5111.qtwebengine,qt.qt5.5111.qtwebengine.gcc_64").split(",");
-    if (packages.length > 0 && packages[0] !== "") {
-        widget.deselectAll();
-        for (var i in packages) {
-            var pkg = trim(packages[i]);
-            widget.selectComponent(pkg);
-        }
-    }
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.LicenseAgreementPageCallback = function() {
-    gui.currentPageWidget().AcceptLicenseRadioButton.setChecked(true);
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.StartMenuDirectoryPageCallback = function() {
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.ReadyForInstallationPageCallback = function()
-{
-    gui.clickButton(buttons.NextButton);
-}
-Controller.prototype.FinishedPageCallback = function() {
-    var checkBoxForm = gui.currentPageWidget().LaunchQtCreatorCheckBoxForm
-    if (checkBoxForm && checkBoxForm.launchQtCreatorCheckBox) {
-        checkBoxForm.launchQtCreatorCheckBox.checked = false;
-    }
-    gui.clickButton(buttons.FinishButton);
-}
-EOF
-
-wget https://s3.amazonaws.com/rstudio-buildtools/qt-unified-linux-x64-3.0.5-online.run
-chmod +x qt-unified-linux-x64-3.0.5-online.run
 
 echo "Installing Qt, this will take a while."
 echo " - Ignore warnings about QtAccount credentials and/or XDG_RUNTIME_DIR."
 echo " - Do not click on any Qt setup dialogs, it is controlled by a script."
-sudo ./qt-unified-linux-x64-3.0.5-online.run --script  qt-noninteractive-install-linux.qs
+wget wget http://download.qt.io/official_releases/qt/5.9/5.9.0/qt-opensource-linux-x64-5.9.0.run
+chmod +x qt-opensource-linux-x64-5.9.0.run
+./qt-opensource-linux-x64-5.9.0.run
 cd .. || exit
 
 # SavvyCan Install
