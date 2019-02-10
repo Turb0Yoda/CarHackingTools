@@ -1,10 +1,10 @@
 Raspberry Pi Twist.
 ------------
-This is my fork of the Carhacking.tools script to work on a Raspberry Pi 3B running Ubuntu MATE. I had some issues with the install and decided to rework the script a little bit. 
+This is my fork of the Carhacking.tools script that has been reworked and updated a bit for modern Ubuntu versions, since some repos were changed. Originally I was making this remake to be focused on being run from a RPI 3B, but instead opted to just run from a normal laptop running Ubuntu 18.04 LTS.
 
 
 # CarHacking.Tools
-[CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu MATE ARM, currently at 16.04 LTS.
+[CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu 18.04 LTS.
 
 ### Install Full Desktop
 
