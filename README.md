@@ -2,6 +2,8 @@ Raspberry Pi Twist.
 ------------
 This is my fork of the Carhacking.tools script that has been reworked and updated a bit for modern Ubuntu versions, since some repos were changed. Originally I was making this remake to be focused on being run from a RPI 3B, but instead opted to just run from a normal laptop running Ubuntu 18.04 LTS.
 
+The readme is largely unchanged from the original. I've added some notes here and there.
+
 
 # CarHacking.Tools
 [CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu 18.04 LTS.
@@ -39,6 +41,8 @@ Here are three of my favorites that I own and test with:
 | Veepeak Bluetooth | <http://a.co/80FLIMV> | Great for permanent installs and using with your phone. |
 | Cantact | <https://hackerwarehouse.com/product/cantact-bundle/> | An amazing open-source project for advanced users. |
 | $10 Veepeak Bluetooth | <http://a.co/ajFbcZ4> |  Great for getting started has some limitations. |
+
+*I've opted for the ELM327
 
 # Included Tools
 The following tools are installed and configured automatically:
