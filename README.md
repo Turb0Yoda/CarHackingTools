@@ -1,4 +1,4 @@
-Raspberry Pi Twist.
+Updated Fork.
 ------------
 This is my fork of the Carhacking.tools script that has been reworked and updated a bit for modern Ubuntu versions, since some repos were changed. Originally I was making this remake to be focused on being run from a RPI 3B, but instead opted to just run from a normal laptop running Ubuntu 18.04 LTS.
 
