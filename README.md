@@ -5,6 +5,9 @@ This is my fork of the Carhacking.tools script that has been reworked and update
 The readme is largely unchanged from the original. I've added some notes here and there.
 
 
+# Status
+Toolinstall has been confirmed to work on UBuntu 18.04.2 LTS. The only hitch before full automation is the QT installer.
+
 # CarHacking.Tools
 [CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu 18.04 LTS.
 
