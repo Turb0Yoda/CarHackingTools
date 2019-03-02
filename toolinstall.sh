@@ -348,7 +348,7 @@ cd .. || exit
 
 cd ~/Desktop || exit
 sudo chmod 755 ./*.desktop
-ls -1 ~/Desktop/*.desktop | xargs -i gio set "{}" "metadata::trusted" yes
+ls -1 ~/Desktop/*.desktop | xargs -i gio set "{}" "metadata::trusted" yes || exit
 cd .. || exit
 
 printf "Make sure to hit f5 on the desktop so the desktop icon metadata will refresh."
