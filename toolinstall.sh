@@ -22,7 +22,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 
 #fix for node errors
-echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
+#echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
 
 #Base Package Install (Packages Listed Invidually For Easy Customazation/Trobule Shooting.)
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  \
@@ -94,7 +94,7 @@ zlib1g-dev
 
 
 #fix for npm build errors
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+#sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Python Pip
 sudo python -m pip uninstall pip  # this might need sudo
@@ -215,7 +215,7 @@ cd .. || exit
 # SavvyCan Install
 git clone https://github.com/collin80/SavvyCAN.git
 cd SavvyCAN || exit
-sudo /opt/QT/5.11.1/gcc_64/bin/qmake
+sudo /opt/Qt5.9.0/5.9/gcc_64/bin/qmake
 sudo make
 sudo make install
 sudo ./install
