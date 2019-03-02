@@ -348,4 +348,5 @@ cd .. || exit
 
 cd ~/Desktop || exit
 sudo chmod 755 ./*.desktop
+ls -1 ~/Desktop/*.desktop | xargs -i gio set "{}" "metadata::trusted" yes
 cd .. || exit
