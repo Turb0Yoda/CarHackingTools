@@ -16,8 +16,7 @@ cd /tools || exit
 # Set Background Images
 mkdir -p images
 cd images || exit
-wget https://carhacking.tools/install/images/background.gif -O background.gif
-gsettings set org.gnome.desktop.background picture-uri "/tools/images/background.gif"
+gsettings set org.mate.background picture-filename '/tools/images/Icons/background.gif'
 cd .. || exit
 
 # Configure Desktop
