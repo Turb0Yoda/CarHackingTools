@@ -1,7 +1,5 @@
-#Modified carhackintools script
 #!/bin/bash
-# Ubuntu-MATE RPI Car Hacking Workstation Setup
-
+#Modified carhacking.tools script
 set -e
 
 # Setup Tools Directory
