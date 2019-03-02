@@ -22,6 +22,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 
 #fix for node errors
+#commented out since it started to cause issues rather than fixing previous issues
 #echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
 
 #Base Package Install (Packages Listed Invidually For Easy Customazation/Trobule Shooting.)
@@ -94,6 +95,7 @@ zlib1g-dev
 
 
 #fix for npm build errors
+#commented out since it started to cause issues rather than fixing previous issues
 #sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Python Pip
@@ -107,6 +109,7 @@ printf "\\n"
 
 # Bluelog
 # Read The Docs: https://github.com/MS3FGX/Bluelog
+cd /tools || exit
 git clone https://github.com/MS3FGX/Bluelog.git
 cd Bluelog || exit
 sudo make install
@@ -120,6 +123,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  can-utils
 # Canbus-utils
 # Read The Docs Here: https://github.com/digitalbond/canbus-utils
 # More Reading:  http://www.digitalbond.com/blog/2015/03/05/tool-release-digital-bond-canbus-utils/
+cd /tools || exit
 git clone https://github.com/digitalbond/canbus-utils
 cd canbus-utils || exit
 npm install
@@ -131,6 +135,7 @@ cd .. || exit
 #cd cantact-app
 #ant build
 #cd cantact-app || exit
+cd /tools || exit
 wget https://github.com/linklayer/cantact-app/releases/download/v0.3.0-alpha/cantact-v0.3.0-alpha.zip
 sudo unzip cantact-v0.3.0-alpha.zip
 sudo rm cantact-v0.3.0-alpha.zip
@@ -139,7 +144,9 @@ cd .. || exit
 # Caringcaribou
 # Read The Docs Here: https://github.com/CaringCaribou/caringcaribou
 pip install --user python-can
+cd /tools || exit
 git clone https://github.com/CaringCaribou/caringcaribou
+cd .. || exit
 
 # c0f
 # Read the Docs Here: https://github.com/zombieCraig/c0f
@@ -148,10 +155,13 @@ sudo gem install c0f
 # ICSim
 # Read The Docs Here: https://github.com/zombieCraig/ICSim
 # Quick Start:  ./setup_vcan.sh &&  ./icsim vcan0 && ./controls vcan0
+cd /tools || exit
 git clone https://github.com/zombieCraig/ICSim.git
+cd .. || exit
 
 # KatyOBD
 # Read The Docs Here:
+cd /tools || exit
 git clone https://github.com/YangChuan80/KatyOBD
 #Fix Typo in KatyOBD
 cd KatyOBD || exit
@@ -162,12 +172,14 @@ cd .. || exit
 # Kayak
 # Read The Docs Here: http://kayak.2codeornot2code.org/
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
+cd /tools || exit
 git clone git://github.com/dschanoeh/Kayak
 cd Kayak
 mvn install
 cd .. || exit
 
 # OBD-Monitor
+cd /tools || exit
 git clone https://github.com/dchad/OBD-Monitor
 cd OBD-Monitor || exit
 cd src|| exit
@@ -184,6 +196,7 @@ cd .. || exit
 # Python-ODB
 # Read The Docs Here: https://python-obd.readthedocs.io/en/latest/
 sudo pip install --user pySerial
+cd /tools || exit
 git clone https://github.com/brendan-w/python-OBD
 cd python-OBD || exit
 sudo python setup.py install
@@ -193,10 +206,11 @@ cd .. || exit
 # PyOBD:
 # Fix This!
 # Backup: git clone https://github.com/Pbartek/pyobd-pi.git
+cd /tools || exit
 wget http://www.obdtester.com/download/pyobd_0.9.3.tar.gz
 sudo tar -xzvf pyobd_0.9.3.tar.gz
 sudo rm -rf pyobd_0.9.3.tar.gz
-
+cd .. || exit
 # SavvyCAN
 # Read The Docs Here: https://github.com/collin80/SavvyCAN
 
@@ -213,6 +227,7 @@ echo " - Do not click on any Qt setup dialogs, it is controlled by a script."
 cd .. || exit
 
 # SavvyCan Install
+cd /tools || exit
 git clone https://github.com/collin80/SavvyCAN.git
 cd SavvyCAN || exit
 sudo /opt/Qt5.9.0/5.9/gcc_64/bin/qmake
@@ -228,6 +243,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  scantool
 
 # Socketcand
 # Read The Docs Here: https://github.com/dschanoeh/socketcand
+cd /tools || exit
 git clone http://github.com/dschanoeh/socketcand.git
 cd socketcand || exit
 autoconf
@@ -239,6 +255,7 @@ cd .. || exit
 
 # UDSim
 # Read The Docs Here: https://github.com/zombieCraig/UDSim
+cd /tools || exit
 git clone https://github.com/zombieCraig/UDSim
 cd UDSim/src || exit
 make
