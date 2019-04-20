@@ -14,11 +14,6 @@ sudo usermod -a -G dialout "$USER"
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
-#  Java Fixes
-#echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:webupd8team/java
-#sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
-
 #fix for node errors
 #commented out since it started to cause issues rather than fixing previous issues
 #echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
@@ -69,8 +64,8 @@ moserial \
 net-tools \
 netbeans \
 npm \
-oracle-java8-installer \
-oracle-java8-set-default \
+default-jre \
+default-jdk \
 python \
 python-dev \
 python-dev \
