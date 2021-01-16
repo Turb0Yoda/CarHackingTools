@@ -130,7 +130,7 @@ cd .. || exit
 
 # Caringcaribou
 # Read The Docs Here: https://github.com/CaringCaribou/caringcaribou
-pip install --user python-can
+pip3 install --user python-can
 cd /tools || exit
 git clone https://github.com/CaringCaribou/caringcaribou
 cd .. || exit
