@@ -10,7 +10,7 @@ cd /tools || exit
 # Add user to dialout so USB-to-Serial Works-ish.
 sudo usermod -a -G dialout "$USER"
 
-# Update System
+# Update Systems
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
