@@ -105,11 +105,11 @@ printf "\\n"
 
 # Bluelog
 # Read The Docs: https://github.com/MS3FGX/Bluelog
-cd /tools || exit
-git clone https://github.com/MS3FGX/Bluelog.git
-cd Bluelog || exit
-sudo make install
-cd .. || exit
+#cd /tools || exit
+#git clone https://github.com/MS3FGX/Bluelog.git
+#cd Bluelog || exit
+#sudo make install
+#cd .. || exit
 
 # Can-Utils:
 # Read The Docs: https://github.com/linux-can/can-utils
