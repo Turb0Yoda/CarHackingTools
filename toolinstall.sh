@@ -18,6 +18,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 #commented out since it started to cause issues rather than fixing previous issues
 #echo 'export PATH=$PATH:/usr/local/bin' >> $HOME/.bashrc
 
+#  Java Fixes
+sudo add-apt-repository -y ppa:linuxuprising/java
+echo debconf shared/accepted-oracle-license-v1-2 select true | sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-2 seen true | sudo debconf-set-selections
+
 #Base Package Install (Packages Listed Invidually For Easy Customazation/Trobule Shooting.)
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  \
 aircrack-ng \
@@ -64,15 +69,14 @@ moserial \
 net-tools \
 netbeans \
 npm \
-default-jre \
-default-jdk \
+oracle-java15-installer \
+oracle-java15-set-default \
 python \
 python-dev \
-python-dev \
-python-pip \
-python-serial \
-python-wxtools \
+python3-dev \
 python3-pip \
+python3-serial \
+python-wxtools \
 ruby \
 ruby-dev \
 software-properties-common \
@@ -86,14 +90,13 @@ wget \
 wireshark \
 zlib1g-dev
 
-
 #fix for npm build errors
 #commented out since it started to cause issues rather than fixing previous issues
 #sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Python Pip
-sudo python -m pip uninstall pip  # this might need sudo
-sudo apt install --reinstall python-pip
+#sudo python -m pip uninstall pip  # this might need sudo
+#sudo apt install --reinstall python-pip
 
 # Starting Car Hacking Tool Installation
 
