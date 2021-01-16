@@ -116,16 +116,6 @@ printf "\\n"
 # More Reading: # More Reading: https://discuss.cantact.io/t/using-can-utils/24
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  can-utils
 
-# Canbus-utils
-# Read The Docs Here: https://github.com/digitalbond/canbus-utils
-# More Reading:  http://www.digitalbond.com/blog/2015/03/05/tool-release-digital-bond-canbus-utils/
-cd /tools || exit
-git clone https://github.com/digitalbond/canbus-utils
-chmod 777 -R canbus-utils
-cd canbus-utils || exit
-npm install
-cd .. || exit
-
 # Cantact-App
 # Read The Docs Here: https://github.com/linklayer/cantact-app/
 #git clone https://github.com/linklayer/cantact-app
@@ -166,6 +156,16 @@ cd KatyOBD || exit
 sed -i 's/tkinter/Tkinter/g' KatyOBD.py
 cd .. || exit
 
+# Canbus-utils
+# Read The Docs Here: https://github.com/digitalbond/canbus-utils
+# More Reading:  http://www.digitalbond.com/blog/2015/03/05/tool-release-digital-bond-canbus-utils/
+cd /tools || exit
+git clone https://github.com/digitalbond/canbus-utils
+chmod 777 -R /tools/canbus-utils
+cd canbus-utils || exit
+npm install
+cd .. || exit
+
 # Kayak
 # Read The Docs Here: http://kayak.2codeornot2code.org/
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
@@ -189,7 +189,6 @@ make utests
 cd .. || exit
 cd .. || exit
 
-
 # Python-ODB
 # Read The Docs Here: https://python-obd.readthedocs.io/en/latest/
 sudo pip install --user pySerial
@@ -198,7 +197,6 @@ git clone https://github.com/brendan-w/python-OBD
 cd python-OBD || exit
 sudo python setup.py install
 cd .. || exit
-
 
 # PyOBD:
 # Fix This!
@@ -232,7 +230,6 @@ sudo make
 sudo make install
 sudo ./install
 cd .. || exit
-
 
 # Scantool
 # Read The Docs Here: https://samhobbs.co.uk/2015/04/scantool-obdii-car-diagnostic-software-linux
