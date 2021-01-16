@@ -121,6 +121,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y  can-utils
 # More Reading:  http://www.digitalbond.com/blog/2015/03/05/tool-release-digital-bond-canbus-utils/
 cd /tools || exit
 git clone https://github.com/digitalbond/canbus-utils
+chmod 777 -R canbus-utils
 cd canbus-utils || exit
 npm install
 cd .. || exit
