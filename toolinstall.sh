@@ -169,11 +169,11 @@ cd .. || exit
 # Kayak
 # Read The Docs Here: http://kayak.2codeornot2code.org/
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
-cd /tools || exit
-git clone git://github.com/dschanoeh/Kayak
-cd Kayak
-mvn install
-cd .. || exit
+#cd /tools || exit
+#git clone git://github.com/dschanoeh/Kayak
+#cd Kayak
+#mvn install
+#cd .. || exit
 
 # OBD-Monitor
 cd /tools || exit
@@ -191,11 +191,11 @@ cd .. || exit
 
 # Python-ODB
 # Read The Docs Here: https://python-obd.readthedocs.io/en/latest/
-sudo pip install --user pySerial
+sudo pip3 install --user pySerial
 cd /tools || exit
 git clone https://github.com/brendan-w/python-OBD
 cd python-OBD || exit
-sudo python setup.py install
+sudo pip3 install obd
 cd .. || exit
 
 # PyOBD:
