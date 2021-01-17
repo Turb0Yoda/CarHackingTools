@@ -209,18 +209,6 @@ cd .. || exit
 # SavvyCAN
 # Read The Docs Here: https://github.com/collin80/SavvyCAN
 
-# Start With QT:
-mkdir -p QT
-cd QT || exit
-wget http://download.qt.io/official_releases/qt/5.9/5.9.0/qt-opensource-linux-x64-5.9.0.run
-chmod +x qt-opensource-linux-x64-5.9.0.run
-
-echo "Installing Qt, this will take a while."
-echo " - Ignore warnings about QtAccount credentials and/or XDG_RUNTIME_DIR."
-echo " - Do not click on any Qt setup dialogs, it is controlled by a script."
-./qt-opensource-linux-x64-5.9.0.run
-cd .. || exit
-
 # SavvyCan Install
 cd /tools || exit
 git clone https://github.com/collin80/SavvyCAN.git
