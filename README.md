@@ -1,30 +1,15 @@
-Updated Fork.
-------------
-This is my fork of the Carhacking.tools script that has been reworked and updated a bit for modern Ubuntu versions, since some repos were changed. Originally I was making this remake to be focused on being run from a RPI 3B, but instead opted to just run from a normal laptop running Ubuntu 18.04 LTS.
+Hello all,
 
-The readme is largely unchanged from the original. I've added some notes here and there.
+This is my fork of jgamblin's CarHackingTools, designed to work on both Ubuntu 18.04 and 20.04. It's a WIP as of right now as I am planning to add more things... though we all know how plans can change. The README remains largely unchanged, and I have removed the workstationinstall.sh since terminal is king or something idk.
 
-
-# Status
-Toolinstall has been confirmed to work on UBuntu 18.04.2 LTS. The only hitch before full automation is the QT installer.
+### Tested Operating Systems
+- Ubuntu 18.04 LTS
+- Ubuntu 20.04 LTS
 
 # CarHacking.Tools
 [CarHacking.Tools](CarHacking.Tools) is a scripts collection of scripts to help jump start car research (and hacking?). All the scripts are designed to run on Ubuntu 18.04 LTS.
 
-### Install Full Desktop
-
-To Install The Full Desktop:
-
-```
-Git clone https://github.com/Turb0Yoda/CarHackingTools
-cd CarHackingTools
-sudo chmod +x *.sh
-./workstationinstall.sh
-```
-
-### Install Tools Only
-
-To Install Only The Tools:
+To Install The Tools:
 ```
 Git clone https://github.com/Turb0Yoda/CarHackingTools
 cd CarHackingTools
