@@ -67,8 +67,8 @@ moserial \
 net-tools \
 netbeans \
 npm \
-oracle-java15-installer \
-oracle-java15-set-default \
+oracle-java16-installer \
+oracle-java16-set-default \
 python \
 python-dev \
 python3-dev \
