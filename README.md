@@ -53,6 +53,7 @@ The following tools are installed and configured automatically:
 | Scantool |  <https://www.scantool.net/> | Super old tool but still works. |
 | Socketcand |  <https://github.com/dschanoeh/socketcand> | Basic CAN tool. |
 | UDSim |  <https://github.com/zombieCraig/UDSim> | Basic simulator for testing without a car. |
+| CANToolz |  <https://github.com/CANToolz/CANToolz/> | CANBus analysis tool |
 | Wireshark |  <https://www.wireshark.org/> | Great for capturing OBDII data just like you would ethernet data. |  
 
 # Stuff To Read
