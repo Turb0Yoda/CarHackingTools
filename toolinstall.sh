@@ -132,7 +132,7 @@ git clone https://github.com/CaringCaribou/caringcaribou
 
 # c0f
 # Read the Docs Here: https://github.com/zombieCraig/c0f
-sudo gem install c0f
+#sudo gem install c0f
 
 # ICSim
 # Read The Docs Here: https://github.com/zombieCraig/ICSim
@@ -150,11 +150,11 @@ cd .. || exit
 # Kayak
 # Read The Docs Here: http://kayak.2codeornot2code.org/
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
-mkdir -p -p kayak
-cd kayak || exit
-curl http://kayak.2codeornot2code.org/Kayak-1.0-SNAPSHOT-linux.sh > Kayak-1.0-SNAPSHOT-linux.sh
-chmod +x Kayak-1.0-SNAPSHOT-linux.sh
-cd .. || exit
+#mkdir -p -p kayak
+#cd kayak || exit
+#curl http://kayak.2codeornot2code.org/Kayak-1.0-SNAPSHOT-linux.sh > Kayak-1.0-SNAPSHOT-linux.sh
+#chmod +x Kayak-1.0-SNAPSHOT-linux.sh
+#cd .. || exit
 
 # OBD-Monitor
 git clone https://github.com/dchad/OBD-Monitor
