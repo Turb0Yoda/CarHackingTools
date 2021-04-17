@@ -183,3 +183,11 @@ cd UDSim/src || exit
 make
 cd .. || exit
 cd .. || exit
+
+# YACHT
+# Read the Docs Here: https://github.com/CANToolz/CANToolz/wiki
+python3 -m pip install --upgrade --force pip
+pip3 install numpy bitstring flask mido
+git clone https://github.com/CANToolz/CANToolz
+sudo python3 setup.py install
+cd .. || exit
