@@ -192,3 +192,13 @@ git clone https://github.com/CANToolz/CANToolz
 cd CANToolz
 sudo python3 setup.py install
 cd .. || exit
+
+# socketcand
+# Read the Docs here: https://github.com/linux-can/socketcand
+git clone https://github.com/linux-can/socketcand
+cd socketcand
+./autogen.sh
+./configure
+make
+make install
+cd .. || exit
