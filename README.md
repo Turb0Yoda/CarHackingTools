@@ -51,7 +51,7 @@ The following tools are installed and configured automatically:
 | Python-OBD |  <https://github.com/brendan-w/python-OBD> | Use over PIP install. |
 | SavvyCAN |  <http://www.savvycan.com/> | Basic CAN tool. |
 | Scantool |  <https://www.scantool.net/> | Super old tool but still works. |
-| Socketcand |  <https://github.com/dschanoeh/socketcand> | Basic CAN tool. |
+| Socketcand |  <hhttps://github.com/linux-can/socketcand> | Basic CAN tool. |
 | UDSim |  <https://github.com/zombieCraig/UDSim> | Basic simulator for testing without a car. |
 | CANToolz |  <https://github.com/CANToolz/CANToolz/> | CANBus analysis tool |
 | Wireshark |  <https://www.wireshark.org/> | Great for capturing OBDII data just like you would ethernet data. |  
