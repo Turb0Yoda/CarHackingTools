@@ -152,7 +152,6 @@ cd .. || exit
 # To Install ./Kayak-1.0-SNAPSHOT-linux.sh --silent
 wget https://github.com/dschanoeh/Kayak/releases/download/untagged-3597039ad20ce9798a99/Kayak-1.0-SNAPSHOT.zip
 unzip Kayak-1.0-SNAPSHOT.zip
-cd .. || exit
 
 # OBD-Monitor
 git clone https://github.com/dchad/OBD-Monitor
