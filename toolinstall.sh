@@ -196,6 +196,7 @@ git clone https://github.com/linux-can/socketcand
 cd socketcand
 ./autogen.sh
 ./configure
+make clean
 make
-make install
+sudo make install
 cd .. || exit
